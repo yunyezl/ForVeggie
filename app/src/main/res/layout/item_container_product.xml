@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="Product"
+            type="com.forveggie.model.Product" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/shape_shadow"
+        >
+
+        <ImageView
+            android:id="@+id/imageProduct"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_margin="20dp"
+            android:scaleType="centerCrop"
+            android:imageURL="@{Product.imgurl1}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textProductName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="35dp"
+            android:text="@{Product.productName}"
+            android:maxWidth="190dp"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            app:layout_constraintStart_toEndOf="@id/imageProduct"
+            app:layout_constraintTop_toTopOf="@id/imageProduct" />
+
+        <TextView
+            android:id="@+id/badge_allow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:background="@drawable/rounded_badge"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="5dp"
+            android:text="허용"
+            android:textColor="@color/colorWhite"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/textProductName"
+            app:layout_constraintStart_toEndOf="@id/textProductName"
+            app:layout_constraintTop_toTopOf="@id/textProductName" />
+
+        <TextView
+            android:id="@+id/badge_notAllow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_bagde_red"
+            android:layout_marginBottom="5dp"
+            android:paddingLeft="8dp"
+            android:paddingTop="4dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="4dp"
+            android:text="비허용"
+            android:textColor="@color/colorWhite"
+            android:textSize="10dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="@id/imageProduct"
+            app:layout_constraintBottom_toTopOf="@id/textProductName"
+            app:layout_constraintStart_toStartOf="@id/textProductName"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text='@{"알러지 : " + Product.allergy}'
+            android:textSize="12dp"
+            android:maxWidth="190dp"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintLeft_toLeftOf="@id/textProductName"
+            app:layout_constraintTop_toBottomOf="@id/textProductName" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

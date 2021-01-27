@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Hi, Veggie!</string>
+    <string name="input_id">email</string>
+    <string name="input_password">password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="status_login">로그인 상태 유지하기</string>
+    <string name="sign_in_to_stay_veggie">Sign in to stay veggie</string>
+    <string name="tasty_veggie_life_with_hi_veggie">tasty veggie life, Hi Veggie!</string>
+    <string name="email">Email</string>
+    <string name="email_gmail_com">email@gmail.com</string>
+    <string name="password">Password</string>
+    <string name="password_hint">*****</string>
+    <string name="forgot_password">forgot password?</string>
+    <string name="dont_t_have_an_account_sign_up_now">Dont\'t have an account? Sign up now!</string>
+    <string name="search">검색</string>
+    <string name="scrap">스크랩</string>
+    <string name="my_page">my page</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="input_keyword">검색어를 입력하세요!</string>
+</resources>
