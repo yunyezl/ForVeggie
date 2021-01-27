@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "334130761320",
+    "project_id": "forveggie-40152",
+    "storage_bucket": "forveggie-40152.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:334130761320:android:6e4e159d23c6d46b48f5dd",
+        "android_client_info": {
+          "package_name": "com.forveggie"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "334130761320-dkriqov9b3enlr18e91amreq9espp0bl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.forveggie",
+            "certificate_hash": "9419f7d5ce5e829bf8739ddcab507049fa460e78"
+          }
+        },
+        {
+          "client_id": "334130761320-4rm214fkc6q1nm9f3fjn711p44gog8pt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjAHDIxtsko12Tk7ZduIHBDeVLHnEUZdA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "334130761320-4rm214fkc6q1nm9f3fjn711p44gog8pt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
