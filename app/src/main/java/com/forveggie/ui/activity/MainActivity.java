@@ -5,8 +5,10 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.forveggie.R;
+import com.forveggie.model.Product;
 import com.forveggie.ui.fragment.MyPageFragment;
 import com.forveggie.ui.fragment.SearchFragment;
+import com.forveggie.ui.listener.ProductListener;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
@@ -42,4 +44,5 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
 }

@@ -1,5 +1,6 @@
 package com.forveggie.ui.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -20,9 +21,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.forveggie.R;
 import com.forveggie.databinding.FragmentSearchBinding;
 import com.forveggie.model.Product;
+import com.forveggie.ui.activity.DetailActivity;
 import com.forveggie.ui.adapter.ProductListAdapter;
+import com.forveggie.ui.listener.ProductListener;
 import com.forveggie.viewmodel.SearchViewModel;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Timer;
@@ -33,7 +37,7 @@ import java.util.TimerTask;
  * Use the {@link SearchFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class SearchFragment extends Fragment {
+public class SearchFragment extends Fragment implements ProductListener {
 
     private FragmentSearchBinding fragmentSearchBinding;
     private SearchViewModel viewModel;
@@ -65,7 +69,7 @@ public class SearchFragment extends Fragment {
     private void initUI() {
         fragmentSearchBinding.productRecyclerView.setHasFixedSize(true);
         viewModel = new ViewModelProvider(this).get(SearchViewModel.class);
-        productListAdapter = new ProductListAdapter(productList);
+        productListAdapter = new ProductListAdapter(productList, this);
         fragmentSearchBinding.productRecyclerView.setAdapter(productListAdapter);
         fragmentSearchBinding.editTextSearchBar.addTextChangedListener(new TextWatcher() {
             @Override
@@ -106,7 +110,6 @@ public class SearchFragment extends Fragment {
                 super.onScrolled(recyclerView, dx, dy);
                 int last = ((LinearLayoutManager)recyclerView.getLayoutManager()).findLastCompletelyVisibleItemPosition();
                 int itemTotalCount = recyclerView.getAdapter().getItemCount() - 1;
-                System.out.println(last + " + " + itemTotalCount);
                 if (!fragmentSearchBinding.productRecyclerView.canScrollVertically(1)) {
                     final String inputStr = fragmentSearchBinding.editTextSearchBar.getText().toString().trim();
                     if (!inputStr.isEmpty()) {
@@ -146,5 +149,12 @@ public class SearchFragment extends Fragment {
             fragmentSearchBinding.setIsLoadingMore(
                     !(fragmentSearchBinding.getIsLoadingMore() != null && fragmentSearchBinding.getIsLoadingMore()));
         }
+    }
+
+    @Override
+    public void onProductClicked(Product product) {
+        Intent intent = new Intent(getActivity(), DetailActivity.class);
+        intent.putExtra("product", product);
+        startActivity(intent);
     }
 }
