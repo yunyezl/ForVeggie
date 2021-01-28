@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="40dp"
+    android:layout_marginTop="40dp"
+    android:layout_marginRight="40dp"
+    android:layout_marginBottom="40dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".ui.activity.LoginActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:text="Hi, Veggie!"
+        android:textColor="@color/colorPrimary"
+        android:textSize="40dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="아이디"
+            android:textSize="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="2.5"
+                android:background="@drawable/rounded_edittext"
+                android:hint="아이디를 입력해주세요"
+                android:padding="10dp"
+                android:textSize="16dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"
+                android:text="중복 확인"
+                android:textColor="@color/colorBlack" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="비밀번호"
+            android:textSize="16dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_edittext"
+            android:hint="비밀번호를 입력해주세요"
+            android:padding="10dp"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="비밀번호 재확인"
+            android:textSize="16dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_edittext"
+            android:hint="비밀번호를 입력해주세요"
+            android:padding="10dp"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="닉네임"
+            android:textSize="16dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_edittext"
+            android:hint="닉네임 입력해주세요"
+            android:padding="10dp"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="채식 타입 선택"
+            android:textSize="16dp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="5dp"
+            android:paddingBottom="5dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/vegan"
+                android:layout_width="75dp"
+                android:layout_height="40dp"
+                android:background="@drawable/rounded_edittext"
+                android:text="비건"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/lacto"
+                android:layout_width="75dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/rounded_edittext"
+                android:text="락토"
+                app:layout_constraintStart_toEndOf="@id/vegan"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/ovo"
+                android:layout_width="75dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/rounded_edittext"
+                android:text="오보"
+                app:layout_constraintStart_toEndOf="@id/lacto"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/lactoOvo"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/rounded_edittext"
+                android:text="락토 오보"
+                app:layout_constraintStart_toEndOf="@id/ovo"
+                app:layout_constraintTop_toTopOf="@id/vegan" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/pesco"
+                android:layout_width="75dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rounded_edittext"
+                android:text="페스코"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vegan" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/pollo"
+                android:layout_width="75dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rounded_edittext"
+                android:text="폴로"
+                app:layout_constraintStart_toEndOf="@id/pesco"
+                app:layout_constraintTop_toBottomOf="@id/lacto" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/none"
+                android:layout_width="85dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rounded_edittext"
+                android:text="선택 안함"
+                app:layout_constraintStart_toEndOf="@id/pollo"
+                app:layout_constraintTop_toBottomOf="@id/ovo" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="입력 완료" />
+
+
+</LinearLayout>
