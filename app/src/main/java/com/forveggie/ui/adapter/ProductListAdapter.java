@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.forveggie.R;
 import com.forveggie.databinding.ItemContainerProductBinding;
 import com.forveggie.model.Product;
+import com.forveggie.ui.listener.ProductListener;
 
 import java.util.List;
 
@@ -18,9 +19,11 @@ public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.
 
     private final List<Product> productList;
     private LayoutInflater layoutInflater;
+    private ProductListener productListener;
 
-    public ProductListAdapter(List<Product> productList) {
+    public ProductListAdapter(List<Product> productList, ProductListener productListener) {
         this.productList = productList;
+        this.productListener = productListener;
     }
 
     @NonNull
@@ -59,8 +62,8 @@ public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.
         public void bindProduct(Product product) {
             itemContainerProductBinding.setProduct(product);
             itemContainerProductBinding.executePendingBindings();
+            itemContainerProductBinding.getRoot().setOnClickListener(v ->
+                    productListener.onProductClicked(product));
         }
-
     }
-
 }

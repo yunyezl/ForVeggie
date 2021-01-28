@@ -2,7 +2,9 @@ package com.forveggie.model;
 
 import com.google.gson.annotations.SerializedName;
 
-public class Product {
+import java.io.Serializable;
+
+public class Product implements Serializable {
 
     @SerializedName("prdlstNm")
     private String productName;

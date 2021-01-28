@@ -17,4 +17,8 @@
     <string name="my_page">my page</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="input_keyword">검색어를 입력하세요!</string>
+    <string name="MeatMaterial">포함된 동물성 재료</string>
+    <string name="containingAllergy">알러지 성분 표기</string>
+    <string name="notice">하이베지는 해썹에서 제공하는 제품이미지 및 표장지표기정보를 사용하며, 실제 상품의 표기 정보와 차이가 있을 수 있습니다.</string>
+    <string name="allMaterial">원재료 성분 표기</string>
 </resources>
