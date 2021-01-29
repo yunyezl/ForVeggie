@@ -1,6 +1,8 @@
 package com.forveggie.ui.adapter;
 
+import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -64,6 +66,13 @@ public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.
             itemContainerProductBinding.executePendingBindings();
             itemContainerProductBinding.getRoot().setOnClickListener(v ->
                     productListener.onProductClicked(product));
+            if (product.getFilterResult()) {
+                itemContainerProductBinding.badgeAllow.setVisibility(View.VISIBLE);
+                itemContainerProductBinding.badgeNotAllow.setVisibility(View.GONE);
+            } else {
+                itemContainerProductBinding.badgeAllow.setVisibility(View.GONE);
+                itemContainerProductBinding.badgeNotAllow.setVisibility(View.VISIBLE);
+            }
         }
     }
 }
