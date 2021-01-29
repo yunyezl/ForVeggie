@@ -28,148 +28,305 @@
         android:layout_height="match_parent"
         tools:context=".ui.activity.DetailActivity">
 
-        <TextView
-            android:id="@+id/badge_notAllow"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/rounded_bagde_red"
-            android:paddingLeft="8dp"
-            android:paddingTop="4dp"
-            android:paddingRight="8dp"
-            android:paddingBottom="4dp"
-            android:text="비허용"
-            android:textColor="@color/colorWhite"
-            android:textSize="10dp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@id/imageProduct"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
-        <com.makeramen.roundedimageview.RoundedImageView
-            android:id="@+id/imageProduct"
-            android:layout_width="340dp"
-            android:layout_height="180dp"
-            android:layout_marginTop="10dp"
-            android:imageURL="@{ProductImage}"
-            android:scaleType="centerCrop"
-            app:riv_border_color="#C5C5C5"
-            app:riv_border_width="1dp"
-            app:riv_corner_radius="10dp"
-            android:background="@drawable/rounded_border_background"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/badge_notAllow" />
-
-        <TextView
-            android:id="@+id/productName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="@{ProductName}"
-            android:textColor="@color/colorBlack"
-            android:maxWidth="300dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:gravity="center"
-            app:layout_constraintEnd_toEndOf="@id/imageProduct"
-            app:layout_constraintStart_toStartOf="@id/imageProduct"
-            app:layout_constraintTop_toBottomOf="@id/imageProduct" />
-
-        <TextView
-            android:id="@+id/containingMeatMaterial"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="@string/MeatMaterial"
-            android:textColor="@color/colorBlack"
-            android:textSize="16dp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@id/imageProduct"
-            app:layout_constraintTop_toBottomOf="@id/productName" />
-
-        <TextView
-            android:id="@+id/material"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:maxWidth="340dp"
-            android:layout_marginTop="10dp"
-            android:text="하가나다라마바사아자차카파타하"
-            app:layout_constraintStart_toStartOf="@id/containingMeatMaterial"
-            app:layout_constraintTop_toBottomOf="@id/containingMeatMaterial"
-            />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="@string/allMaterial"
-            android:textColor="@color/colorBlack"
-            android:textSize="16dp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@id/imageProduct"
-            app:layout_constraintTop_toBottomOf="@id/material" />
-
-        <TextView
-            android:id="@+id/textMaterial"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:maxWidth="340dp"
-            android:layout_marginTop="10dp"
-            android:text="@{ProductMaterial}"
-            app:layout_constraintStart_toStartOf="@id/textView"
-            app:layout_constraintTop_toBottomOf="@id/textView"
-            />
-
-        <TextView
-            android:id="@+id/notifyAllergy"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="@string/containingAllergy"
-            android:textColor="@color/colorBlack"
-            android:textSize="16dp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/imageProduct"
-            app:layout_constraintTop_toBottomOf="@+id/textMaterial" />
-
-        <TextView
-            android:id="@+id/textAllergy"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:maxWidth="360dp"
-            android:layout_marginTop="10dp"
-            android:text="@{ProductAllergy}"
-            app:layout_constraintStart_toStartOf="@id/notifyAllergy"
-            app:layout_constraintTop_toBottomOf="@id/notifyAllergy"
-            />
-
-
-        <View
-            android:id="@+id/viewDivider1"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="1.8dp"
-            android:background="#C5C5C5"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            app:layout_constraintBottom_toTopOf="@id/notify"/>
-
-
-        <TextView
-            android:id="@+id/notify"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:maxWidth="360dp"
-            android:paddingRight="15dp"
-            android:paddingBottom="20dp"
-            android:text="@string/notice"
-            android:textColor="@color/colorBlack"
-            android:textSize="10dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="match_parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent">
 
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/badge_allow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/rounded_badge_green"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="4dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="4dp"
+                    android:text="허용"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="10dp"
+                    android:textStyle="bold"
+                    android:visibility="invisible"
+                    app:layout_constraintStart_toStartOf="@id/imageProduct"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/badge_notAllow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/rounded_badge_red"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="4dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="4dp"
+                    android:text="비허용"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="10dp"
+                    android:textStyle="bold"
+                    android:visibility="invisible"
+                    app:layout_constraintStart_toStartOf="@id/imageProduct"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/imageProduct"
+                    android:layout_width="340dp"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/rounded_border_background"
+                    android:imageURL="@{ProductImage}"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/badge_notAllow"
+                    app:riv_border_color="#C5C5C5"
+                    app:riv_border_width="1dp"
+                    app:riv_corner_radius="10dp" />
+
+                <TextView
+                    android:id="@+id/productName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:maxWidth="300dp"
+                    android:text="@{ProductName}"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/imageProduct"
+                    app:layout_constraintStart_toStartOf="@id/imageProduct"
+                    app:layout_constraintTop_toBottomOf="@id/imageProduct" />
+
+                <TextView
+                    android:id="@+id/containingMeatMaterial"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/MeatMaterial"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/imageProduct"
+                    app:layout_constraintTop_toBottomOf="@id/productName" />
+
+                <LinearLayout
+                    android:id="@+id/materialList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toStartOf="@id/containingMeatMaterial"
+                    app:layout_constraintTop_toBottomOf="@id/containingMeatMaterial">
+
+                    <LinearLayout
+                        android:id="@+id/egg"
+                        android:layout_width="340dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:maxWidth="340dp"
+                            android:text="달걀류"
+                            android:textColor="@color/colorBlack"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/eggList"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:maxWidth="340dp"
+                            android:text="원재료" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/milk"
+                        android:layout_width="340dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:maxWidth="340dp"
+                            android:text="유제품"
+                            android:textColor="@color/colorBlack"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/milkList"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:maxWidth="340dp"
+                            android:text="원재료명" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/fish"
+                        android:layout_width="340dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:maxWidth="340dp"
+                            android:text="생선류"
+                            android:textColor="@color/colorBlack"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/fishList"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:maxWidth="340dp"
+                            android:text="원재료명" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/poultry"
+                        android:layout_width="340dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:maxWidth="340dp"
+                            android:text="가금류"
+                            android:textColor="@color/colorBlack"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/poultryList"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:maxWidth="340dp"
+                            android:text="원재료명"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/meat"
+                        android:layout_width="340dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:maxWidth="340dp"
+                            android:text="육류"
+                            android:textColor="@color/colorBlack"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/meatList"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:maxWidth="340dp"
+                            android:text="원재료명" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/allMaterial"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/imageProduct"
+                    app:layout_constraintTop_toBottomOf="@id/materialList" />
+
+                <TextView
+                    android:id="@+id/textMaterial"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:maxWidth="340dp"
+                    android:text="@{ProductMaterial}"
+                    app:layout_constraintStart_toStartOf="@id/textView"
+                    app:layout_constraintTop_toBottomOf="@id/textView" />
+
+                <TextView
+                    android:id="@+id/notifyAllergy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/containingAllergy"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/imageProduct"
+                    app:layout_constraintTop_toBottomOf="@+id/textMaterial" />
+
+                <TextView
+                    android:id="@+id/textAllergy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:maxWidth="360dp"
+                    android:text="@{ProductAllergy}"
+                    app:layout_constraintStart_toStartOf="@id/notifyAllergy"
+                    app:layout_constraintTop_toBottomOf="@id/notifyAllergy" />
+
+                <TextView
+                    android:id="@+id/mf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="제조업체"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/notifyAllergy"
+                    app:layout_constraintTop_toBottomOf="@id/textAllergy" />
+
+                <TextView
+                    android:id="@+id/manufacturer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:maxWidth="280dp"
+                    app:layout_constraintStart_toEndOf="@id/mf"
+                    app:layout_constraintTop_toTopOf="@id/mf" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -24,6 +24,11 @@ public class Product implements Serializable {
     @SerializedName("barcode")
     private String barcode;
 
+    @SerializedName("manufacture")
+    private String manufacture;
+
+    private Boolean filterResult = true;
+
     public String getProductName() {
         return productName;
     }
@@ -46,5 +51,13 @@ public class Product implements Serializable {
 
     public String getBarcode() {
         return barcode;
+    }
+
+    public Boolean getFilterResult() { return filterResult; }
+
+    public String getManufacture() { return manufacture; }
+
+    public void setFilterResult(Boolean filterResult) {
+        this.filterResult = filterResult;
     }
 }

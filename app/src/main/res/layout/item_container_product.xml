@@ -43,29 +43,10 @@
             app:layout_constraintTop_toTopOf="@id/imageProduct" />
 
         <TextView
-            android:id="@+id/badge_allow"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="18dp"
-            android:background="@drawable/rounded_badge"
-            android:paddingLeft="10dp"
-            android:paddingTop="5dp"
-            android:paddingRight="10dp"
-            android:paddingBottom="5dp"
-            android:text="허용"
-            android:textColor="@color/colorWhite"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:visibility="gone"
-            app:layout_constraintBottom_toBottomOf="@id/textProductName"
-            app:layout_constraintStart_toEndOf="@id/textProductName"
-            app:layout_constraintTop_toTopOf="@id/textProductName" />
-
-        <TextView
             android:id="@+id/badge_notAllow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/rounded_bagde_red"
+            android:background="@drawable/rounded_badge_red"
             android:layout_marginBottom="5dp"
             android:paddingLeft="8dp"
             android:paddingTop="4dp"
@@ -75,9 +56,31 @@
             android:textColor="@color/colorWhite"
             android:textSize="10dp"
             android:textStyle="bold"
+            android:visibility="gone"
             app:layout_constraintTop_toTopOf="@id/imageProduct"
             app:layout_constraintBottom_toTopOf="@id/textProductName"
             app:layout_constraintStart_toStartOf="@id/textProductName"/>
+
+        <TextView
+            android:id="@+id/badge_allow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_badge_green"
+            android:layout_marginBottom="5dp"
+            android:paddingLeft="8dp"
+            android:paddingTop="4dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="4dp"
+            android:text="허용"
+            android:textColor="@color/colorWhite"
+            android:textSize="10dp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="@id/imageProduct"
+            app:layout_constraintBottom_toTopOf="@id/textProductName"
+            app:layout_constraintStart_toStartOf="@id/textProductName"/>
+
+
 
         <TextView
             android:layout_width="wrap_content"

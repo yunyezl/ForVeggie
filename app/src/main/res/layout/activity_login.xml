@@ -43,7 +43,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
                 android:layout_weight="2.5"
-                android:background="@drawable/rounded_edittext"
+                android:background="@drawable/rounded_gray_background"
                 android:hint="아이디를 입력해주세요"
                 android:padding="10dp"
                 android:textSize="16dp" />
@@ -76,7 +76,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:background="@drawable/rounded_edittext"
+            android:background="@drawable/rounded_gray_background"
             android:hint="비밀번호를 입력해주세요"
             android:padding="10dp"
             android:textSize="16dp" />
@@ -99,7 +99,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:background="@drawable/rounded_edittext"
+            android:background="@drawable/rounded_gray_background"
             android:hint="비밀번호를 입력해주세요"
             android:padding="10dp"
             android:textSize="16dp" />
@@ -122,7 +122,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:background="@drawable/rounded_edittext"
+            android:background="@drawable/rounded_gray_background"
             android:hint="닉네임 입력해주세요"
             android:padding="10dp"
             android:textSize="16dp" />
@@ -151,7 +151,7 @@
                 android:id="@+id/vegan"
                 android:layout_width="75dp"
                 android:layout_height="40dp"
-                android:background="@drawable/rounded_edittext"
+                android:background="@drawable/shape_shadow"
                 android:text="비건"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -161,7 +161,7 @@
                 android:layout_width="75dp"
                 android:layout_height="40dp"
                 android:layout_marginLeft="5dp"
-                android:background="@drawable/rounded_edittext"
+                android:background="@drawable/shape_shadow"
                 android:text="락토"
                 app:layout_constraintStart_toEndOf="@id/vegan"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -171,7 +171,7 @@
                 android:layout_width="75dp"
                 android:layout_height="40dp"
                 android:layout_marginLeft="5dp"
-                android:background="@drawable/rounded_edittext"
+                android:background="@drawable/shape_shadow"
                 android:text="오보"
                 app:layout_constraintStart_toEndOf="@id/lacto"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -181,7 +181,7 @@
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_marginLeft="5dp"
-                android:background="@drawable/rounded_edittext"
+                android:background="@drawable/shape_shadow"
                 android:text="락토 오보"
                 app:layout_constraintStart_toEndOf="@id/ovo"
                 app:layout_constraintTop_toTopOf="@id/vegan" />
@@ -191,7 +191,7 @@
                 android:layout_width="75dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="5dp"
-                android:background="@drawable/rounded_edittext"
+                android:background="@drawable/shape_shadow"
                 android:text="페스코"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/vegan" />
@@ -202,7 +202,7 @@
                 android:layout_height="40dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
-                android:background="@drawable/rounded_edittext"
+                android:background="@drawable/shape_shadow"
                 android:text="폴로"
                 app:layout_constraintStart_toEndOf="@id/pesco"
                 app:layout_constraintTop_toBottomOf="@id/lacto" />
@@ -213,7 +213,7 @@
                 android:layout_height="40dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
-                android:background="@drawable/rounded_edittext"
+                android:background="@drawable/shape_shadow"
                 android:text="선택 안함"
                 app:layout_constraintStart_toEndOf="@id/pollo"
                 app:layout_constraintTop_toBottomOf="@id/ovo" />
